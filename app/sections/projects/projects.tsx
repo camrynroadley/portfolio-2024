@@ -1,54 +1,24 @@
-import * as projects from "../../data/projects.json";
+import * as React from "react";
+import NavBar from "@/app/components/navBar";
 import Card from "@/app/components/card/card";
+import data from "@/app/data/projects.json";
 import { PROJECTS } from "@/app/constants";
-import { Project } from "@/app/models/types";
 
-const Projects = (): JSX.Element => {
-  const backgroundClassName = 'bg-[#454B3E] flex h-screen';
-
+const Projects = () => {
   return (
-    <div className={backgroundClassName}>
-      {/* Left half of the screen: Vertical menu bar */}
-      <div className="w-1/4">
-        {/* Menu items */}
-        <nav className="p-4">
-          <ul>
-            <li className="mb-4">
-              <a href="#" className="text-blue-600 hover:text-blue-800">
-                Home
-              </a>
-            </li>
-            <li className="mb-4">
-              <a href="#" className="text-blue-600 hover:text-blue-800">
-                About
-              </a>
-            </li>
-            <li className="mb-4">
-              <a href="#" className="text-blue-600 hover:text-blue-800">
-                Portfolio
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-blue-600 hover:text-blue-800">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
-      {/* Right half of the screen: Two cards with information */}
-      <div className="w-3/4 p-8">
-        {projects.map((project: Project, index: number) => {
+    <div className="flex gap-40 justify-between px-16 py-16 bg-[#454B3E] max-md:flex-wrap max-md:px-5">
+      <NavBar sectionName={PROJECTS} />
+      <div className="flex flex-col space-y-16">
+        {data.map((project) => {
+          const { heading, subheading, date, description } = project;
           return (
             <Card
-              key={`projects-card-${index}`}
+              key={`card-${heading}`}
               sectionName={PROJECTS}
-              subHeading={`${project.subheading} ⚬ ${project.date}`}
-              heading={project.heading}
-              description={project.description}
-              showButton={true}
-              showImage={false}
+              heading={heading}
+              subheading={subheading}
+              date={date}
+              description={description}
             />
           );
         })}

@@ -1,13 +1,18 @@
 import NavBar from "./components/navBar";
+import Hero from "./sections/hero/hero";
 import Projects from "./sections/projects/projects";
+import Reads from "./sections/reads/reads";
+import Talks from "./sections/talks/talks";
+import Contact from "./sections/contact/contact";
 
 const Home = () => {
-  const red = `#50d71e`;
-  const className = `bg-[${red}] shadow-md rounded-lg p-6 mb-4`;
-
   return (
     <>
+      <Hero />
       <Projects />
+      <Reads />
+      <Talks />
+      <Contact />
     </>
   );
 }

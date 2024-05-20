@@ -1,52 +1,52 @@
-import Image from "next/image";
-import { PROJECTS, READS, TALKS } from "../../constants";
-import { ProjectsStyles, ReadsStyles, TalksStyles } from "./styles";
+import { PROJECTS, READS } from "../../constants";
+import getStyles from "./styles";
 
 interface CardProps {
   sectionName: string;
-  subHeading: string;
   heading: string;
-  description: string;
-  showButton: boolean;
-  showImage: boolean;
+  subheading: string;
+  date: string;
+  description?: string;
+  embedLink?: string;
 }
 
 const Card = (props: CardProps): JSX.Element => {
+  const { sectionName, heading, subheading, date, description, embedLink } =
+    props;
   const {
-    sectionName,
-    subHeading,
-    heading,
-    description,
-    showButton,
-    showImage,
-  } = props;
-
-  // Create styles
-  let styles = {
-    cardClassName: "",
-    subHeadingClassName: "",
-    headingClassName: "",
-    descriptionClassName: "",
-  };
-
-  switch (sectionName) {
-    case PROJECTS:
-      styles = ProjectsStyles;
-      break;
-    case READS:
-
-    case TALKS:
-      break;
-    default:
-      
-  }
-
-
-
+    backgroundClassName,
+    headingClassName,
+    subheadingClassName,
+    dateClassName,
+    descriptionClassName,
+    buttonClassName,
+  } = getStyles(sectionName);
+  const showButton = sectionName === PROJECTS;
+  const showEmbedContent = sectionName == READS;
   return (
-    <div className={styles.cardClassName}>
-      <h2 className={styles.headingClassName}>{heading}</h2>
-      <p>This is some information for card 1.</p>
+    <div className={backgroundClassName}>
+      <div className={subheadingClassName}>
+        {subheading} ⚬ <span className={dateClassName}>{date}</span>
+      </div>
+      <div className={headingClassName}>{heading}</div>
+      <div className={descriptionClassName}>
+        <span className="">
+          Designed and developed a new website for the Big Sand volleyball club
+          using{" "}
+        </span>
+        <span className="font-medium">
+          TypeScript, React, Next.js, Node.js, Express and GCP.{" "}
+        </span>
+      </div>
+      {showButton && <button className={buttonClassName}>LEARN MORE</button>}
+      {showEmbedContent && (
+        <iframe
+          src={embedLink}
+          height="434"
+          width="504"
+          title="LinkedIn Embedded Post"
+        />
+      )}
     </div>
   );
 };
