@@ -6,7 +6,7 @@ import { TALKS } from "@/app/constants";
 
 const Talks = () => {
   return (
-    <div className="flex gap-40 justify-between px-16 py-16 bg-[#B49D89] max-md:flex-wrap max-md:px-5">
+    <div className="h-[100rem] sticky top-0 z-30 flex gap-40 justify-between px-16 py-16 bg-[#B49D89] max-md:flex-wrap max-md:px-5">
       <NavBar sectionName={TALKS} />
       <div className="flex flex-col space-y-16">
         {data.map((read) => {

@@ -6,7 +6,7 @@ import { READS } from "@/app/constants";
 
 const Reads = () => {
   return (
-    <div className="flex gap-40 justify-between px-16 py-16 bg-[#CDC3D0] max-md:flex-wrap max-md:px-5">
+    <div className="h-[100rem] sticky top-0 z-20 flex gap-40 justify-between px-16 py-16 bg-[#CDC3D0] max-md:flex-wrap max-md:px-5">
       <NavBar sectionName={READS}/>
       <div className="flex flex-col space-y-16">
         {data.map((read) => {
