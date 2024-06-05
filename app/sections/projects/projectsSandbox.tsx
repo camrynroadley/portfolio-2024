@@ -37,35 +37,25 @@ const Projects = () => {
   };
 
   const cardY = useTransform(scrollYProgress, [0.3, 0.4], [1000, 0]);
-  const position = useTransform(scrollYProgress, [0.3, 0.4], ["flex", "sticky"]);
+  const position = useTransform(scrollYProgress, [0.2, 0.9], ["flex", "sticky"]);
   const aboutTextOpacity = useTransform(scrollYProgress, [0.2, 0.3], [0, 1]);
 
   return (
-    <div className="h-[200rem] sticky top-0 z-10 flex gap-40 justify-between px-16 py-16 bg-[#454B3E] max-md:flex-wrap max-md:px-5">
-      <motion.div
-        style={{
-          opacity: aboutTextOpacity,
-        }}
-      >
-        <NavBar sectionName={PROJECTS} />
-      </motion.div>
-      <div className="flex flex-col space-y-16">
+      <div className="">
         {data.map((project) => {
           const { heading, subheading, date, description } = project;
           return (
             <motion.div
               key={`card-${heading}`}
               style={{
-                y: cardY,
                 position,
               }}
               className="card-container"
               initial="offscreen"
               whileInView="onscreen"
-              viewport={{ once: true, amount: 0.8 }}
               variants={cardVariants}
             >
-            <div className="top-0 z-30 flex mb-64">
+            <div className="top-0 z-30 flex mb-24">
               <Card
                 key={`card-${heading}`}
                 sectionName={PROJECTS}
@@ -79,7 +69,6 @@ const Projects = () => {
           );
         })}
       </div>
-    </div>
   );
 };
 

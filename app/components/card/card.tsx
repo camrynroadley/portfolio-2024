@@ -1,7 +1,8 @@
 "use client";
-import { motion, Variants } from "framer-motion";
+import { useRef } from "react";
 import { PROJECTS, READS } from "../../constants";
 import getStyles from "./styles";
+import { motion, useScroll, useTransform, Variants } from "framer-motion";
 
 interface CardProps {
   sectionName: string;
@@ -11,20 +12,6 @@ interface CardProps {
   description?: string;
   embedLink?: string;
 }
-
-const cardVariants: Variants = {
-  offscreen: {
-    y: 300,
-  },
-  onscreen: {
-    y: 0,
-    transition: {
-      type: "spring",
-      bounce: 0.2,
-      duration: 1,
-    },
-  },
-};
 
 const Card = (props: CardProps): JSX.Element => {
   const { sectionName, heading, subheading, date, description, embedLink } =
@@ -40,39 +27,24 @@ const Card = (props: CardProps): JSX.Element => {
   const showButton = sectionName === PROJECTS;
   const showEmbedContent = sectionName == READS;
   return (
-    <motion.div
-      className="card-container"
-      initial="offscreen"
-      whileInView="onscreen"
-      viewport={{ once: true, amount: 0.8 }}
-    >
-      <motion.div className="card" variants={cardVariants}>
-      <div className={backgroundClassName}>
-        <div className={subheadingClassName}>
-          {subheading} ⚬ <span className={dateClassName}>{date}</span>
-        </div>
-        <div className={headingClassName}>{heading}</div>
-        <div className={descriptionClassName}>
-          <span className="">
-            Designed and developed a new website for the Big Sand volleyball
-            club using{" "}
-          </span>
-          <span className="font-medium">
-            TypeScript, React, Next.js, Node.js, Express and GCP.{" "}
-          </span>
-        </div>
-        {showButton && <button className={buttonClassName}>LEARN MORE</button>}
-        {showEmbedContent && (
-          <iframe
-            src={embedLink}
-            height="434"
-            width="504"
-            title="LinkedIn Embedded Post"
-          />
-        )}
+    <div className={backgroundClassName}>
+      <div className={subheadingClassName}>
+        {subheading} ⚬ <span className={dateClassName}>{date}</span>
       </div>
-    </motion.div>
-    </motion.div>
+      <div className={headingClassName}>{heading}</div>
+      <div className={descriptionClassName}>
+        {description}
+      </div>
+      {showButton && <button className={buttonClassName}>LEARN MORE</button>}
+      {showEmbedContent && (
+        <iframe
+          src={embedLink}
+          height="300"
+          width="504"
+          title="LinkedIn Embedded Post"
+        />
+      )}
+    </div>
   );
 };
 

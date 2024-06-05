@@ -6,9 +6,7 @@ import { TALKS } from "@/app/constants";
 
 const Talks = () => {
   return (
-    <div className="h-[150rem] sticky top-0 z-30 flex gap-40 justify-between px-16 py-16 bg-[#B49D89] max-md:flex-wrap max-md:px-5">
-      <NavBar sectionName={TALKS} />
-      <div className="flex flex-col space-y-16">
+      <div>
         {data.map((read) => {
           const { heading, subheading, date } = read;
           return (
@@ -22,7 +20,6 @@ const Talks = () => {
           );
         })}
       </div>
-    </div>
   );
 };
 

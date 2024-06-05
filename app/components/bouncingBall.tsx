@@ -27,7 +27,7 @@ export const BouncingBall = () => {
         height: transitionValues
       }}
       animate={{
-        y: ["2rem", "8rem", "10rem"],
+        y: ["20rem", "8rem", "10rem"],
         width: ["5rem", "5rem", "6rem"],
         height: ["5rem", "5rem", "4rem"]
       }}

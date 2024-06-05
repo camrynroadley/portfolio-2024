@@ -40,24 +40,16 @@ const Reads = () => {
   const aboutTextOpacity = useTransform(scrollYProgress, [0.6, 0.7], [0, 1]);
 
   return (
-    <div className="h-[180rem] sticky top-0 z-20 flex gap-40 justify-between px-16 py-16 bg-[#CDC3D0] max-md:flex-wrap max-md:px-5">
-      <motion.div
-        style={{
-          opacity: aboutTextOpacity,
-        }}
-      >
-        <NavBar sectionName={READS} />
-      </motion.div>
-      <div className="flex flex-col space-y-16">
+      <div className="">
         {data.map((read) => {
           const { heading, subheading, date } = read;
           return (
             <motion.div
               key={`card-${heading}`}
-              style={{
-                y: cardY,
-                position,
-              }}
+              // style={{
+              //   y: cardY,
+              //   position,
+              // }}
               className="card-container"
               initial="offscreen"
               whileInView="onscreen"
@@ -75,7 +67,6 @@ const Reads = () => {
             </motion.div>
           );
         })}
-      </div>
     </div>
   );
 };

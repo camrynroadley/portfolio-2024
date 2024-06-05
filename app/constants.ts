@@ -3,3 +3,24 @@ export const PROJECTS = 'projects';
 export const READS = 'reads';
 export const TALKS = 'talks';
 export const CONTACT = 'contact';
+
+// Colors
+export const COLORS = {
+    BG_PURPLE: '#56425E',
+    BG_BLUE: '#514173',
+    BG_GREEN: '#454B3E',
+    BG_LIGHT_PURPLE: '#CDC3D0',
+    BG_ORANGE: '#B49D89',
+    NAV_PROJECTS_UNSELECTED: '#A1AF8E',
+    NAV_PROJECTS_SELECTED: '#DFEAD1',
+    NAV_PROJECTS_HOVER: '#E3F6CA',
+    NAV_READS_UNSELECTED: '#56425D',
+    NAV_READS_SELECTED: '#360F43',
+    NAV_READS_HOVER: '#8E609E',
+    NAV_TALKS_UNSELECTED: '#6E5642',
+    NAV_TALKS_SELECTED: '#4B3522',
+    NAV_TALKS_HOVER: '#7E4C22',
+    NAV_CONTACT_UNSELECTED: '#525B48',
+    NAV_CONTACT_SELECTED: '#414F30',
+    NAV_CONTACT_HOVER: '#BBDB91',
+}

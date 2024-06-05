@@ -12,11 +12,11 @@ const getStyles = (sectionName: string) => {
   switch (sectionName) {
     case PROJECTS:
       styles.backgroundClassName =
-        "flex flex-col items-start px-16 py-12 bg-[#525B48] rounded-[50px] max-md:px-5 max-md:max-w-full";
+        "items-start px-16 py-12 bg-[#525B48] rounded-[50px] max-md:px-5 max-md:max-w-full";
       styles.headingClassName =
         "mt-9 text-8xl font-medium text-[#DFEAD1] max-md:max-w-full max-md:text-4xl";
       styles.descriptionClassName =
-        " mt-11 text-2xl max-md:mt-10 max-md:max-w-full text-[#DFEAD1]";
+        "mt-11 text-2xl max-md:mt-10 max-md:max-w-full text-[#DFEAD1]";
       styles.subheadingClassName =
         "max-md:max-w-full font-medium text-[#DFEAD1] text-xl";
       styles.dateClassName = "max-md:max-w-full font-normal text-[#DFEAD1]";
@@ -25,7 +25,7 @@ const getStyles = (sectionName: string) => {
       break;
     case READS:
       styles.backgroundClassName =
-        "flex flex-col items-start px-16 py-12 bg-[#56425D] rounded-[50px] max-md:px-5 max-md:max-w-full";
+        "items-start px-16 py-12 bg-[#56425D] rounded-[50px] max-md:px-5 max-md:max-w-full";
       styles.headingClassName =
         "mt-9 text-7xl font-medium text-[#CFA5DE] max-md:max-w-full max-md:text-4xl";
       styles.subheadingClassName =
