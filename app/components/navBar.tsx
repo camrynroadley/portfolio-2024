@@ -14,24 +14,24 @@ const getStyles = (sectionName: string) => {
   };
   switch (sectionName) {
     case "projects":
-      styles.textClassName = "text-[#A1AF8E] hover:text-[#E3F6CA]";
+      styles.textClassName = "text-[#5C5C5C] hover:text-[#E3F6CA]";
       styles.selectedTextClassName =
-        "text-[#DFEAD1] font-medium hover:text-[#E3F6CA]";
+        "text-[#1D1D1D] hover:text-[#E3F6CA]";
       break;
     case "reads":
-      styles.textClassName = "text-[#56425D] hover:text-[#8E609E]";
+      styles.textClassName = "text-[#5C5C5C] hover:text-[#8E609E]";
       styles.selectedTextClassName =
-        "text-[#360F43] font-medium hover:text-[#8E609E]";
+        "text-[#1D1D1D] hover:text-[#8E609E]";
       break;
     case "talks":
-      styles.textClassName = "text-[#6E5642] hover:text-[#7E4C22]";
+      styles.textClassName = "text-[#5C5C5C] hover:text-[#7E4C22]";
       styles.selectedTextClassName =
-        "text-[#4B3522] font-medium hover:text-[#7E4C22]";
+        "text-[#1D1D1D] hover:text-[#7E4C22]";
       break;
     case "contact":
-      styles.textClassName = "text-[#525B48] hover:text-[#BBDB91]";
+      styles.textClassName = "text-[#5C5C5C] font-medium hover:text-[#BBDB91]";
       styles.selectedTextClassName =
-        "text-[#414F30] font-medium hover:text-[#E3F6CA]";
+        "text-[#1D1D1D] hover:text-[#E3F6CA]";
       break;
     default:
     // code block
@@ -54,28 +54,22 @@ const NavBar = (props: NavBarProps): JSX.Element => {
 
   return (
     <div className="sticky top-20 z-10 ">
-      <div className="flex flex-col self-start text-2xl whitespace-nowrap text-stone-400">
-        <motion.div
-          style={{
-            color: textColor
-          }}
-        >
+      <div className="flex flex-col self-start text-xl whitespace-nowrap">
           <a
             href="#"
-            // className={
-            //   sectionName === ABOUT ? selectedTextClassName : textClassName
-            // }
+            className={
+              sectionName === ABOUT ? selectedTextClassName : textClassName
+            }
           >
-            ABOUT
+            About
           </a>
-        </motion.div>
         <a
           href="#"
           className={
             sectionName === PROJECTS ? selectedTextClassName : textClassName
           }
         >
-          PROJECTS
+          Projects
         </a>
         <a
           href="#"
@@ -83,7 +77,7 @@ const NavBar = (props: NavBarProps): JSX.Element => {
             sectionName === READS ? selectedTextClassName : textClassName
           }
         >
-          READS
+          Reads
         </a>
         <a
           href="#"
@@ -91,7 +85,7 @@ const NavBar = (props: NavBarProps): JSX.Element => {
             sectionName === TALKS ? selectedTextClassName : textClassName
           }
         >
-          TALKS
+          Talks
         </a>
         <a
           href="#"
@@ -99,7 +93,7 @@ const NavBar = (props: NavBarProps): JSX.Element => {
             sectionName === CONTACT ? selectedTextClassName : textClassName
           }
         >
-          CONTACT
+          Contact
         </a>
       </div>
     </div>

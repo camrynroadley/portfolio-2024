@@ -10,6 +10,7 @@ const Talks = () => {
         {data.map((read) => {
           const { heading, subheading, date } = read;
           return (
+            <div className="sticky top-20 z-30">
             <Card
               key={`card-${heading}`}
               sectionName={TALKS}
@@ -17,6 +18,7 @@ const Talks = () => {
               subheading={subheading}
               date={date}
             />
+            </div>
           );
         })}
       </div>

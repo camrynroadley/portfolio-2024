@@ -1,21 +1,42 @@
 "use client";
-import { useRef } from "react";
 import { PROJECTS, READS } from "../../constants";
 import getStyles from "./styles";
-import { motion, useScroll, useTransform, Variants } from "framer-motion";
+import {
+  motion,
+  MotionValue,
+  useScroll,
+  useTransform,
+  Variants,
+} from "framer-motion";
 
 interface CardProps {
+  index: number;
+  progress: MotionValue<number>;
+  range: number[];
+  targetScale: number;
   sectionName: string;
   heading: string;
   subheading: string;
   date: string;
   description?: string;
-  embedLink?: string;
+  websiteLink?: string;
+  githubLink?: string;
 }
 
 const Card = (props: CardProps): JSX.Element => {
-  const { sectionName, heading, subheading, date, description, embedLink } =
-    props;
+  const {
+    index,
+    progress,
+    range,
+    targetScale,
+    sectionName,
+    heading,
+    subheading,
+    date,
+    description,
+    websiteLink,
+    githubLink
+  } = props;
   const {
     backgroundClassName,
     headingClassName,
@@ -23,28 +44,34 @@ const Card = (props: CardProps): JSX.Element => {
     dateClassName,
     descriptionClassName,
     buttonClassName,
-  } = getStyles(sectionName);
-  const showButton = sectionName === PROJECTS;
-  const showEmbedContent = sectionName == READS;
+  } = getStyles(index);
+  const showButton = sectionName === PROJECTS || sectionName === READS;
+
+  const scale = useTransform(progress, range, [1, targetScale]);
   return (
-    <div className={backgroundClassName}>
-      <div className={subheadingClassName}>
-        {subheading} ⚬ <span className={dateClassName}>{date}</span>
+    <motion.div style={{  }}>
+      <div className={backgroundClassName}>
+        <div className={subheadingClassName}>
+          {subheading} ⚬ <span className={dateClassName}>{date}</span>
+        </div>
+        <div className={headingClassName}>{heading}</div>
+        <div className={descriptionClassName}>{description}</div>
+        {showButton && index === 0 && (
+          <>
+            <a target="_blank" href={websiteLink}><button className={buttonClassName}>WEBSITE</button></a>
+            <a target="_blank" href={githubLink}><button className={buttonClassName}>GITHUB</button></a>
+          </>
+        )}
+                {showButton && index === 1 && (
+          <>
+            <a target="_blank" href={githubLink}><button className={buttonClassName}>GITHUB</button></a>
+          </>
+        )}
+        {showButton && index === 2 && (
+          <a target="_blank" href={websiteLink}><button className={buttonClassName}>READ POST</button></a>
+        )}
       </div>
-      <div className={headingClassName}>{heading}</div>
-      <div className={descriptionClassName}>
-        {description}
-      </div>
-      {showButton && <button className={buttonClassName}>LEARN MORE</button>}
-      {showEmbedContent && (
-        <iframe
-          src={embedLink}
-          height="300"
-          width="504"
-          title="LinkedIn Embedded Post"
-        />
-      )}
-    </div>
+    </motion.div>
   );
 };
 

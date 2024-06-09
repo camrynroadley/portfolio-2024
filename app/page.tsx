@@ -29,10 +29,16 @@ const Home = () => {
   });
 
   // Background Colors
+  // const bgColor = useTransform(
+  //   scrollYProgress,
+  //   [0, 0.2, 0.6, 0.8, 1],
+  //   [COLORS.BG_PURPLE, COLORS.BG_BLUE, COLORS.BG_GREEN, COLORS.BG_LIGHT_PURPLE, COLORS.BG_ORANGE]
+  // );
+
   const bgColor = useTransform(
     scrollYProgress,
-    [0, 0.2, 0.6, 0.8, 1],
-    [COLORS.BG_PURPLE, COLORS.BG_BLUE, COLORS.BG_GREEN, COLORS.BG_LIGHT_PURPLE, COLORS.BG_ORANGE]
+    [0, 0.2],
+    ['#333432', '#D7DCD0']
   );
 
   // Section Names
@@ -63,9 +69,9 @@ const Home = () => {
           </motion.div>
           <div className="px-16 py-16 max-md:px-5">
             <Projects />
-            <Reads />
-            <Talks />
-            <Contact />
+            {/* <Reads />
+            <Talks /> */}
+            {/* <Contact /> */}
           </div>
         </div>
       </div>

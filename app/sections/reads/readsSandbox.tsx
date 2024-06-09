@@ -40,33 +40,35 @@ const Reads = () => {
   const aboutTextOpacity = useTransform(scrollYProgress, [0.6, 0.7], [0, 1]);
 
   return (
-      <div className="">
-        {data.map((read) => {
-          const { heading, subheading, date } = read;
-          return (
-            <motion.div
+    <div className="">
+      {data.map((read) => {
+        const { heading, subheading, date } = read;
+        return (
+          // <motion.div
+          //   key={`card-${heading}`}
+          //   // style={{
+          //   //   y: cardY,
+          //   //   position,
+          //   // }}
+          //   className="card-container"
+          //   initial="offscreen"
+          //   whileInView="onscreen"
+          //   viewport={{ once: true, amount: 0.8 }}
+          //   variants={cardVariants}
+          // >
+          <div className="sticky top-20 z-30">
+            <Card
               key={`card-${heading}`}
-              // style={{
-              //   y: cardY,
-              //   position,
-              // }}
-              className="card-container"
-              initial="offscreen"
-              whileInView="onscreen"
-              viewport={{ once: true, amount: 0.8 }}
-              variants={cardVariants}
-            >
-              <Card
-                key={`card-${heading}`}
-                sectionName={READS}
-                heading={heading}
-                subheading={subheading}
-                date={date}
-                embedLink="https://www.linkedin.com/embed/feed/update/urn:li:share:7158533789558726657"
-              />
-            </motion.div>
-          );
-        })}
+              sectionName={READS}
+              heading={heading}
+              subheading={subheading}
+              date={date}
+              embedLink="https://www.linkedin.com/embed/feed/update/urn:li:share:7158533789558726657"
+            />
+            {/* </motion.div> */}
+          </div>
+        );
+      })}
     </div>
   );
 };
