@@ -18,15 +18,15 @@ import { ABOUT, PROJECTS, READS, TALKS } from "./constants";
 
 const Home = () => {
   const { scrollY, scrollYProgress } = useScroll();
-  const [section, setSection] = useState(ABOUT)
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    const yProgress = scrollYProgress.get()
-    if (yProgress > 0.3 && yProgress < 0.75) {
-      setSection(PROJECTS)
-    } else if (yProgress > 0.75 && yProgress < 1) {
-      setSection(READS)
-    }
-  });
+  const [section, setSection] = useState(ABOUT);
+  // useMotionValueEvent(scrollYProgress, "change", (latest) => {
+  //   const yProgress = scrollYProgress.get();
+  //   if (yProgress > 0.3 && yProgress < 0.75) {
+  //     setSection(PROJECTS);
+  //   } else if (yProgress > 0.75 && yProgress < 1) {
+  //     setSection(READS);
+  //   }
+  // });
 
   // Background Colors
   // const bgColor = useTransform(
@@ -38,22 +38,12 @@ const Home = () => {
   const bgColor = useTransform(
     scrollYProgress,
     [0, 0.2],
-    ['#333432', '#D7DCD0']
-  );
-
-  // Section Names
-  const sectionName = useTransform(
-    scrollYProgress,
-    [0.4, 0.7, 1],
-    [PROJECTS, READS, TALKS]
+    ["#131313", "#F3FB8E"]
   );
 
   useEffect(() => {
-    console.log('*** section: ', section)
-  }, [section])
-
-  const lastNameX = useTransform(scrollYProgress, [0, 0.02], [0, 1200]);
-  const navBarOpacity = useTransform(scrollYProgress, [0.1, 0.3], [0, 1]);
+    console.log("*** section: ", section);
+  }, [section]);
 
   return (
     <motion.div
@@ -63,17 +53,7 @@ const Home = () => {
     >
       <div className="overflow-clip">
         <Hero />
-        <div className="flex gap-40 justify-between px-16 py-16 max-md:flex-wrap max-md:px-5">
-          <motion.div style={{}}>
-            <NavBar sectionName={section} />
-          </motion.div>
-          <div className="px-16 py-16 max-md:px-5">
-            <Projects />
-            {/* <Reads />
-            <Talks /> */}
-            {/* <Contact /> */}
-          </div>
-        </div>
+        <Projects />
       </div>
     </motion.div>
   );

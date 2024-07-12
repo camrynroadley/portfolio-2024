@@ -1,48 +1,47 @@
 [
     {
         "type": "projects",
-        "subheading": "WEB DESIGN AND DEVELOPMENT",
-        "date": "April 2024",
-        "heading": "Big Sand Volleyball",
-        "description": "Designed and developed a new website for the Big Sand volleyball club using TypeScript, React (create-react-app), Material UI, Styled Components.",
-        "websiteLink": "https://bigsandvolleyballwinnipeg.com/",
+        "subheading": "Web Design and Development",
+        "date": "August 2024",
+        "heading": "Personal Website",
+        "description": "Designed and developed this website using boldTypeScript, React, Next.js, Tailwind CSS and Framer Motion.bold",
         "githubLink": ""
     },
     {
         "type": "projects",
-        "subheading": "WEB DESIGN AND DEVELOPMENT",
-        "date": "August 2024",
-        "heading": "Personal Website",
-        "description": "Designed and developed this website using TypeScript, React, Next.js, Tailwind CSS and Framer Motion",
+        "subheading": "Web Design and Development",
+        "date": "April 2024",
+        "heading": "Big Sand Volleyball",
+        "description": "Designed and developed a new website for the Big Sand Volleyball Club using boldTypeScript, React, Material UI and Styled Components.",
+        "websiteLink": "https://bigsandvolleyballwinnipeg.com/",
         "githubLink": ""
     },
     {
-        "type": "reads",
-        "subheading": "BLOG POST",
-        "date": "January 2024",
-        "heading": "How to be a mentee",
-        "description": "Shared my experiences as a mentee at TELUS and advice on how to make the most out of your mentorship",
-        "websiteLink": "https://www.linkedin.com/posts/camrynroadley_mentee-mentorship-mentoring-activity-7158589397926371328-qJyf?utm_source=share&utm_medium=member_desktop"
-    },
-    {
         "type": "talks",
-        "subheading": "PRESENTATION",
-        "date": "May 2023",
-        "heading": "Microfrontend Benefits",
-        "description": "Co-presented a live demo on Micro Frontend Benefits at the 2023 TELUS CIO Tech Conference, resulting in 40 mins of knowledge sharing x 400 TELUS team members"
-    },
-    {
-        "type": "talks",
-        "subheading": "EVENT HOSTING",
-        "date": "June 2023",
-        "heading": "Making time for personal development",
-        "description": "Co-hosted an event as part of the 2023 Connections (TELUS' Women and Allies community) Self-Investment Series, resulting in 90 mins of personal development x 215 TELUS team members"
-    },
-    {
-        "type": "talks",
-        "subheading": "PRESENTATION",
+        "subheading": "Presentation",
         "date": "January 2024",
         "heading": "Experimentation with Gen AI for Refactoring",
-        "description": "Experimented with internal TELUS generative AI tools for code refactoring. Shared findings and starting point at bi-weekly TELUS Tech Forum with 80 team members x 10 mins of learning"
+        "description": "Experimented with internal TELUS generative AI tools for code refactoring. Shared findings and starting point at bi-weekly TELUS Tech Forum with bold80 team members x 10 mins of learning.bold"
+    },
+    {
+        "type": "talks",
+        "subheading": "Event Planning",
+        "date": "June 2023",
+        "heading": "Self-Investment Series",
+        "description": "Organized and co-hosted an event as part of the 2023 Connections (TELUS’ Women and Allies community) Self-Investment Series, resulting in bold90 mins of personal development x 215 TELUS team members.bold"
+    },
+    {
+        "type": "talks",
+        "subheading": "Presentation",
+        "date": "May 2023",
+        "heading": "Microfrontend Benefits",
+        "description": "Co-presented a live demo on Micro Frontend Benefits at the 2023 TELUS CIO Tech Conference, resulting in bold40 mins of knowledge sharing x 400 TELUS team members.bold"
+    },
+    {
+        "type": "talks",
+        "subheading": "Presentation",
+        "date": "May 2023",
+        "heading": "Microfrontend Benefits",
+        "description": "Co-presented a live demo on Micro Frontend Benefits at the 2023 TELUS CIO Tech Conference, resulting in bold40 mins of knowledge sharing x 400 TELUS team members.bold"
     }
 ]

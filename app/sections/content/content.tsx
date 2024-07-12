@@ -1,19 +1,13 @@
 "use client";
 import { useRef } from "react";
 import {
-  motion,
-  useMotionValue,
-  useMotionValueEvent,
   useScroll,
-  useTransform,
-  Variants,
-  useSpring,
 } from "framer-motion";
-import Lenis from '@studio-freight/lenis'
+import Lenis from '@studio-freight/lenis';
 import Card from "@/app/components/card/card";
 import data from "@/app/data/data.json";
 
-const Projects = () => {
+const Content = () => {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -74,9 +68,8 @@ const Projects = () => {
           </div>
         );
       })}
-      {/* <div className="py-96"></div> */}
     </div>
   );
 };
 
-export default Projects;
+export default Content;

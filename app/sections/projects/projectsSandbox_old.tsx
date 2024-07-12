@@ -20,6 +20,34 @@ const Projects = () => {
     offset: ['start start', 'end end']
   });
 
+  // const cardVariants: Variants = {
+  //   offscreen: {
+  //     y: 300,
+  //   },
+  //   onscreen: {
+  //     y: 0,
+  //     transition: {
+  //       type: "spring",
+  //       bounce: 0.2,
+  //       duration: 1,
+  //     },
+  //   },
+  // };
+
+  // const transitionValues = {
+  //   duration: 0.8,
+  //   type: "spring",
+  //   ease: "easeOut",
+  // };
+
+  // const cardY = useTransform(scrollYProgress, [0.3, 0.4], [1000, 0]);
+  // const position = useTransform(
+  //   scrollYProgress,
+  //   [0.2, 0.9],
+  //   ["flex", "sticky"]
+  // );
+  // const aboutTextOpacity = useTransform(scrollYProgress, [0.2, 0.3], [0, 1]);
+
   const lenis = new Lenis()
 
   lenis.on('scroll', (e: any) => {
@@ -36,17 +64,15 @@ const Projects = () => {
   const getCardWrapperClassName = (index: number) => {
     switch (index) {
       case 0:
-        return "sticky top-8 z-0 flex mb-64";
+        return "sticky top-20 z-0 flex mb-64";
       case 1:
-        return "sticky top-16 z-1 flex mb-64";
+        return "sticky top-28 z-1 flex mb-64";
       case 2:
-        return "sticky top-24 z-2 flex mb-64";
+        return "sticky top-36 z-2 flex mb-64";
       case 3:
-        return "sticky top-32 z-3 flex mb-64";
+        return "sticky top-44 z-3 flex mb-64";
       case 4:
-        return "sticky top-40 z-4 flex mb-64";
-      case 5:
-        return "sticky top-0 z-4 flex mb-64";
+        return "sticky top-52 z-4 flex mb-64";
     }
   };
 
@@ -74,7 +100,7 @@ const Projects = () => {
           </div>
         );
       })}
-      {/* <div className="py-96"></div> */}
+      <div className="py-96"></div>
     </div>
   );
 };

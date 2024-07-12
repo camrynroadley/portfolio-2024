@@ -9,7 +9,6 @@ import {
   useTransform,
   AnimatePresence,
 } from "framer-motion";
-import { BouncingBall } from "../../components/bouncingBall";
 
 const Hero = () => {
   const scrollRef = useRef(null);
@@ -21,116 +20,81 @@ const Hero = () => {
     bounce: 0,
   });
 
-  let firstNameX = useTransform(temporaryx, [0, 0.02], [0, -1200]);
-  let lastNameX = useTransform(temporaryx, [0, 0.02], [0, 1200]);
+  const firstNameX = useTransform(temporaryx, [0, 0.02], [0, -1200]);
+  const lastNameX = useTransform(temporaryx, [0, 0.02], [0, 1200]);
+  const textOpacity = useTransform(scrollYProgress, [0, 0.02], [1, 0]);
+  const buttonOpacity = useTransform(scrollYProgress, [0, 0.02], [1, 0]);
+  const buttonPointerEvents = useTransform(scrollYProgress, [0, 0.01], ['auto', 'none']);
 
-  let nameColor = useTransform(temporaryx, [0, 0.02], ['#D5FFE9', '#555555']);
-  let infoColor = useTransform(temporaryx, [0, 0.02], ['#555555', '#D5FFE9']);
-
-
-  const aboutTextOpacity = useTransform(
-    scrollYProgress,
-    [0.02, 0.1, 0.4],
-    [0, 1, 0]
-  );
-  const aboutTextY = useTransform(scrollYProgress, [0.1, 0.2], [0, -200]);
-  const moreTextDisplay = useTransform(
-    scrollYProgress,
-    [0, 0.3],
-    ["block", "none"]
-  );
   // bg-[#56425E]
   return (
-    // <AnimatePresence>
-    //   <div className="h-[100rem] sticky top-0 z-0">
-    //     <div className="flex flex-col pt-4 pb-20 text-[#DFF8EB]">
-    //       {/* <div className="fixed self-end mr-8 text-2xl max-md:mr-2.5">
-    //         MORE +
-    //       </div> */}
-    //       <div className="flex flex-col pr-8 pl-20 mt-20 font-medium whitespace-nowrap text-[300px] max-md:px-5 max-md:mt-10 max-md:max-w-full max-md:text-4xl">
-    //         <div className="max-md:max-w-full -ml-28 -mt-24 max-md:text-4xl">
-    //           <motion.div
-    //             // animate={{ x: 100 }}
-    //             // transition={{ type: "spring", bounce: 0.5 }}
-    //             // initial={{ opacity: 0 }}
-    //             // animate={{ opacity: 1 }}
-    //             // exit={{ opacity: 0 }}
-    //             style={{
-    //               x: firstNameX,
-    //             }}
-    //           >
-    //             Camryn
-    //           </motion.div>
-    //         </div>
-    //         {/* <div className="self-end -mt-32 mr-16 max-md:mr-2.5 max-md:max-w-full max-md:text-4xl"> */}
-    //         <div className="">
-    //           <div className="-mt-44 ml-64 max-md:mr-2.5 max-md:max-w-full max-md:text-4xl">
-    //             <motion.div
-    //               style={{
-    //                 x: lastNameX,
-    //               }}
-    //             >
-    //               Roadley
-    //             </motion.div>
-    //           </div>
-    //         </div>
-    //       </div>
-    //       <div className="flex items-center justify-center">
-    //         <div className="text-6xl -translate-y-96 text-center w-3/4">
-    //           <motion.div
-    //             style={{
-    //               opacity: aboutTextOpacity,
-    //               color: "#323232",
-    //             }}
-    //           >
-    //             Developer and designer based in Canada. Passionate about human
-    //             connection and building enjoyable, accessible apps to enable it.
-    //           </motion.div>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </AnimatePresence>
-    <div className="flex flex-col justify-center">
-      <div className="flex flex-col px-5 py-7 max-md:max-w-full">
-        <div className="self-end text-2xl text-[#747474] max-md:mr-2.5">
-          MORE +
+    <div className="flex flex-col items-center px-20 max-md:px-5">
+      <div className="mt-24 w-full max-w-[1210px] max-md:mt-10 max-md:max-w-full">
+        <div className="flex max-md:flex-col max-md:gap-0">
+          <div className="flex flex-col w-[62%] max-md:ml-0 max-md:w-full">
+            <motion.div
+              style={{
+                x: firstNameX,
+              }}
+            >
+              <div className="font-medium text-lime-300 text-[200px] max-md:mt-10 max-md:max-w-full max-md:text-4xl">
+                Camryn
+              </div>
+            </motion.div>
+          </div>
+          <div className="flex flex-col ml-5 w-[20%] max-md:ml-0 max-md:w-full">
+            <motion.div
+              style={{
+                opacity: textOpacity,
+              }}
+            >
+              <div className="mt-40 text-2xl text-white max-md:mt-10 max-md:max-w-full">
+                Front-end developer based in Canada.
+              </div>
+            </motion.div>
+          </div>
         </div>
+      </div>
+      <div className="w-full max-w-[1027px] max-md:max-w-full">
+        <div className="flex gap-5 max-md:flex-col max-md:gap-0">
+          <div className="flex flex-col w-[29%] max-md:ml-0 max-md:w-full">
+            <motion.div
+              style={{
+                opacity: textOpacity,
+                // color: nameColor,
+              }}
+            >
+              <div className="text-2xl text-right text-white max-md:mt-5">
+                Passionate about{" "}
+                <span className="font-medium text-white">human connection</span>{" "}
+                and building enjoyable, accessible apps.
+              </div>
+            </motion.div>
+          </div>
+          <div className="flex flex-col ml-5 w-[71%] max-md:ml-0 max-md:w-full">
+            <motion.div
+              style={{
+                x: lastNameX,
+              }}
+            >
+              <div className="font-medium text-lime-300 text-[200px] -mt-24 max-md:mt-5 max-md:max-w-full max-md:text-4xl">
+                Roadley
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+      <div className="flex self-end">
         <motion.div
           style={{
-            x: firstNameX,
+            opacity: buttonOpacity,
+            pointerEvents: buttonPointerEvents,
           }}
         >
-          <div className="self-start -ml-12 -mt-24 font-medium text-[#D5FFE9] text-[300px] max-md:max-w-full max-md:text-4xl">
-            Camryn
-          </div>
+          <button className="mt-6 px-6 text-sm justify-center bg-[#F6C3FF] rounded-[50px] font-medium text-[#000000] relative h-[44px] overflow-hidden transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-[#9774E0] before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full max-md:px-4">
+            <span className="relative z-10">Recent Works</span>
+          </button>
         </motion.div>
-        <div className="flex flex-col pr-6 pl-12 -mt-36 w-full max-md:px-5 max-md:max-w-full">
-          <div className="max-md:max-w-full">
-            <div className="flex gap-5 max-md:flex-col max-md:gap-0">
-              <div className="flex flex-col max-md:ml-0 max-md:w-full">
-                <div className="mt-28 text-2xl text-justify text-[#747474] max-md:mt-10">
-                  Developer and designer based in Canada. Passionate about human
-                  connection and building enjoyable, accessible apps to enable
-                  it.
-                  <br />
-                </div>
-              </div>
-              <div className="flex flex-col ml-5 w-[77%] max-md:ml-0 max-md:w-full">
-                <motion.div
-                  style={{
-                    x: lastNameX,
-                    // color: nameColor,
-                  }}
-                >
-                  <div className="font-medium text-[#D5FFE9] text-[300px] max-md:mt-9 max-md:max-w-full max-md:text-4xl">
-                    Roadley
-                  </div>
-                </motion.div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
