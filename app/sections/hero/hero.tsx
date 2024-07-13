@@ -12,10 +12,7 @@ interface HeroProps {
 }
 
 const Hero = ({ onButtonClick }: HeroProps) => {
-  const scrollRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: scrollRef,
-  });
+  const { scrollYProgress } = useScroll();
 
   const springYProgress = useSpring(scrollYProgress, {
     bounce: 0,

@@ -1,10 +1,10 @@
 "use client";
-import { useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Hero from "./sections/hero/hero";
 import Works from "./sections/works/works";
 
-const Home = () => {
+const Page = () => {
   const myRef = useRef(null);
   const { scrollYProgress } = useScroll();
   const bgColor = useTransform(
@@ -16,10 +16,20 @@ const Home = () => {
   const executeScroll = () => {
     if (myRef?.current) {
       const current = myRef.current as any;
-      current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
+  const useMounted = () => {
+    const [mounted, setMounted] = useState<boolean>();
+    useEffect(() => {
+      setMounted(true);
+    }, []);
+    return mounted;
+  };
+
+  const mounted = useMounted();
+  if (!mounted) return null;
   return (
     <motion.div
       style={{
@@ -38,4 +48,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Page;
