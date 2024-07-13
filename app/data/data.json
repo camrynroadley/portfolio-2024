@@ -5,7 +5,12 @@
         "date": "August 2024",
         "heading": "Personal Website",
         "description": "Designed and developed this website using boldTypeScript, React, Next.js, Tailwind CSS and Framer Motion.bold",
-        "githubLink": ""
+        "buttons": [
+            {
+                "label": "GitHub",
+                "link": ""
+            }
+        ]
     },
     {
         "type": "projects",
@@ -13,8 +18,16 @@
         "date": "April 2024",
         "heading": "Big Sand Volleyball",
         "description": "Designed and developed a new website for the Big Sand Volleyball Club using boldTypeScript, React, Material UI and Styled Components.",
-        "websiteLink": "https://bigsandvolleyballwinnipeg.com/",
-        "githubLink": ""
+        "buttons": [
+            {
+                "label": "GitHub",
+                "link": ""
+            },
+            {
+                "label": "Link",
+                "link": ""
+            }
+        ]
     },
     {
         "type": "talks",
@@ -38,10 +51,10 @@
         "description": "Co-presented a live demo on Micro Frontend Benefits at the 2023 TELUS CIO Tech Conference, resulting in bold40 mins of knowledge sharing x 400 TELUS team members.bold"
     },
     {
-        "type": "talks",
-        "subheading": "Presentation",
-        "date": "May 2023",
-        "heading": "Microfrontend Benefits",
-        "description": "Co-presented a live demo on Micro Frontend Benefits at the 2023 TELUS CIO Tech Conference, resulting in bold40 mins of knowledge sharing x 400 TELUS team members.bold"
+        "type": "contact",
+        "subheading": "",
+        "date": "",
+        "heading": "",
+        "description": ""
     }
 ]
