@@ -4,7 +4,7 @@
         "subheading": "Web Design and Development",
         "date": "August 2024",
         "heading": "Personal Website",
-        "description": "Designed and developed this website using boldTypeScript, React, Next.js, Tailwind CSS and Framer Motion.bold",
+        "description": "Designed and developed this website using boldTypeScript, React, Next.js, Tailwind CSS and Framer Motionbold. Experimentation with Builder.io and ChatGPT for initial development and unit tests.",
         "buttons": [
             {
                 "label": "GitHub",

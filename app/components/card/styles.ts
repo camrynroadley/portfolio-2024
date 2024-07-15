@@ -12,11 +12,11 @@ const getStyles = (index: number) => {
   switch (index) {
     case 0:
       styles.backgroundClassName =
-        "items-start bg-[#D5E058] max-w-full h-screen max-xs:py-[10%] max-sm:px-[7%] max-sm:py-[22%] max-lg:px-[8%] max-lg:py-[35%] lg:px-[12%] lg:py-[5%] xl:px-[15%] xl:py-[7%]";
+        "items-start bg-[#D5E058] max-w-full h-screen max-xs:py-[8%] max-sm:px-[7%] max-sm:py-[18%] max-lg:px-[8%] max-lg:py-[30%] lg:px-[12%] lg:py-[5%] xl:px-[15%] xl:py-[6%]";
       styles.headingClassName =
         "mt-6 text-9xl font-medium text-[#212121] max-md:max-w-full max-md:text-7xl";
       styles.descriptionClassName =
-        "mt-8 text-3xl max-md:mt-10 max-md:max-w-full text-[#212121] max-md:text-2xl";
+        "mt-8 text-3xl max-md:mt-10 max-md:max-w-full text-[#212121] max-md:text-xl";
       styles.subheadingClassName =
         "max-md:max-w-full font-medium text-[#212121] text-2xl";
       styles.dateClassName = "max-md:max-w-full font-normal text-[#212121]";

@@ -44,6 +44,7 @@ const Card = (props: CardProps): JSX.Element => {
           {/* {description} */}
           {descriptionTextArray?.[0] || ""}
           <span className="font-medium">{descriptionTextArray?.[1] || ""}</span>
+          {descriptionTextArray?.[2] || ""}
         </div>
         {buttons?.length &&
           buttons.map((button: Button) => (

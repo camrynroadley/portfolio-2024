@@ -20,16 +20,16 @@ const Page = () => {
     }
   };
 
-  // const useMounted = () => {
-  //   const [mounted, setMounted] = useState<boolean>();
-  //   useEffect(() => {
-  //     setMounted(true);
-  //   }, []);
-  //   return mounted;
-  // };
+  const useMounted = () => {
+    const [mounted, setMounted] = useState<boolean>();
+    useEffect(() => {
+      setMounted(true);
+    }, []);
+    return mounted;
+  };
 
-  // const mounted = useMounted();
-  // if (!mounted) return null;
+  const mounted = useMounted();
+  if (!mounted) return null;
   return (
     <motion.div
       style={{
