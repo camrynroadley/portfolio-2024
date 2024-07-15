@@ -38,6 +38,7 @@ const Works = () => {
         const { type, heading, subheading, date, description, buttons } = item;
         return (
           <div
+            data-testid={`card-${heading}`}
             key={`card-${heading}`}
             className={getCardWrapperClassName(index)}
           >

@@ -21,6 +21,7 @@ const Contact = () => {
             <div className="self-stretch my-auto text-xl">⚬</div>
             <div className="peer/personal self-stretch my-auto">
               <a
+                data-testid="github-personal-link"
                 href="https://www.linkedin.com/in/camrynroadley"
                 target="_blank"
                 className="relative w-fit block hover:text-[#F3FB8E] after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#F3FB8E] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
@@ -34,6 +35,7 @@ const Contact = () => {
             <div className="self-stretch my-auto text-xl">⚬</div>
             <div className="peer/professional self-stretch">
               <a
+                data-testid="github-professional-link"
                 href="https://www.linkedin.com/in/camrynroadley"
                 target="_blank"
                 className="relative w-fit block hover:text-[#F3FB8E] after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#F3FB8E] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
