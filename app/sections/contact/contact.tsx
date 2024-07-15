@@ -2,13 +2,13 @@ import * as React from "react";
 
 const Contact = () => {
   return (
-    <div className="bg-neutral-900 w-full mt-auto h-screen justify-center text-[#F6C3FF]">
-      <div className="flex justify-center items-center px-16 py-20 max-md:px-5 max-md:max-w-full">
-        <div className="flex flex-col mt-44 mb-60 max-md:my-10">
-          <div className="text-9xl font-medium text-center max-md:max-w-full max-md:text-4xl">
+    <div className="bg-neutral-900 w-full mt-auto h-screen text-[#F6C3FF]">
+      <div className="flex justify-center px-16 py-20 max-lg:px-10">
+        <div className="flex flex-col mt-44 mb-60 max-lg:mt-10 max-lg:mb-10">
+          <div className="text-9xl font-medium text-center max-lg:text-left max-lg:text-7xl">
             Get in touch.
           </div>
-          <div className="flex gap-3.5 items-center mt-10 text-2xl max-md:flex-wrap">
+          <div className="flex gap-3.5 items-center mt-10 text-2xl max-lg:flex-wrap">
             <div className="self-stretch my-auto">
               <a
                 href="https://www.linkedin.com/in/camrynroadley"
