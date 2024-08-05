@@ -1,5 +1,3 @@
-import { PROJECTS, READS, TALKS, CONTACT } from "@/app/constants";
-
 const getStyles = (index: number) => {
   let styles = {
     backgroundClassName: "",
@@ -12,7 +10,7 @@ const getStyles = (index: number) => {
   switch (index) {
     case 0:
       styles.backgroundClassName =
-        "items-start bg-[#D5E058] max-w-full h-screen max-xs:py-[8%] max-sm:px-[7%] max-sm:py-[18%] max-lg:px-[8%] max-lg:py-[30%] lg:px-[12%] lg:py-[5%] xl:px-[15%] xl:py-[6%]";
+        "items-start flex flex-col justify-center h-[97vh] bg-[#D5E058] max-w-full max-sm:px-[7%] max-lg:px-[8%] lg:px-[12%] xl:px-[15%]";
       styles.headingClassName =
         "mt-6 text-9xl font-medium text-[#212121] max-md:max-w-full max-md:text-7xl";
       styles.descriptionClassName =
@@ -25,7 +23,7 @@ const getStyles = (index: number) => {
       break;
     case 1:
       styles.backgroundClassName =
-        "items-start bg-[#E1C664] max-w-full h-screen max-xs:py-[10%] max-sm:px-[7%] max-sm:py-[12%] max-lg:px-[8%] max-lg:py-[35%] lg:px-[12%] lg:py-[5%] xl:px-[15%] xl:py-[7%]";
+        "items-start flex flex-col justify-center h-[92vh] bg-[#E1C664] max-w-full max-sm:px-[7%] max-lg:px-[8%] lg:px-[12%] xl:px-[15%]";
       styles.headingClassName =
         "mt-6 text-9xl font-medium text-[#212121] max-md:max-w-full max-md:text-7xl";
       styles.descriptionClassName =
@@ -38,22 +36,20 @@ const getStyles = (index: number) => {
       break;
     case 2:
       styles.backgroundClassName =
-        "items-start bg-[#FF7C7C] max-w-full h-screen max-xs:py-[10%]  max-sm:px-[7%] max-sm:py-[10%] max-lg:px-[8%] max-lg:py-[35%] lg:px-[12%] lg:py-[5%] xl:px-[15%] xl:py-[7%]";
+        "items-start flex flex-col justify-center h-[87vh] bg-[#FF7C7C] max-w-full max-sm:px-[7%] max-lg:px-[8%] lg:px-[12%] xl:px-[15%]";
       styles.headingClassName =
-        "mt-6 text-8xl font-medium text-[#212121] max-md:max-w-full max-md:text-4xl md:text-6xl";
+        "mt-6 text-8xl font-medium text-[#212121] max-md:max-w-full max-md:text-4xl md:text-7xl";
       styles.descriptionClassName =
         "mt-8 text-3xl max-md:mt-10 max-md:max-w-full text-[#212121] max-md:text-2xl";
       styles.subheadingClassName =
         "max-md:max-w-full font-medium text-[#212121] text-2xl";
       styles.dateClassName = "max-md:max-w-full font-normal text-[#212121]";
-      styles.buttonClassName =
-        "mt-6 justify-center px-6 py-3 bg-[#F4E1F4] rounded-[50px] font-medium text-[#363636] max-md:px-5";
       break;
     case 3:
       styles.backgroundClassName =
-        "items-start bg-[#C7B1F6] max-w-full h-screen max-xs:py-[10%] max-sm:px-[7%] max-sm:py-[10%] max-md:px-[8%] max-md:py-[35%] md:px-[12%] md:py-[25%] lg:px-[12%] lg:py-[5%] xl:px-[15%] xl:py-[7%]";
+        "items-start flex flex-col justify-center h-[84vh] bg-[#C7B1F6] max-w-full max-sm:px-[7%] max-md:px-[8%] md:px-[12%] lg:px-[12%] xl:px-[15%]";
       styles.headingClassName =
-        "mt-6 text-8xl font-medium text-[#212121] max-md:max-w-full max-md:text-6xl";
+        "mt-6 text-8xl font-medium text-[#212121] max-md:max-w-full max-md:text-5xl md:text-7xl";
       styles.descriptionClassName =
         "mt-8 text-3xl max-md:mt-10 max-md:max-w-full text-[#212121] max-md:text-xl";
       styles.subheadingClassName =
@@ -62,9 +58,9 @@ const getStyles = (index: number) => {
       break;
     case 4:
       styles.backgroundClassName =
-        "items-start bg-[#F6D5FC] max-w-full h-screen max-xs:py-[10%] max-sm:px-[7%] max-sm:py-[10%] max-lg:px-[8%] max-lg:py-[35%] lg:px-[12%] lg:py-[5%] xl:px-[15%] xl:py-[4%]";
+        "items-start flex flex-col justify-center h-[80vh] bg-[#F6D5FC] max-w-full max-sm:px-[7%] max-md:px-[8%] md:px-[12%] lg:px-[12%] xl:px-[15%]";
       styles.headingClassName =
-        "mt-6 text-9xl font-medium text-[#212121] max-md:max-w-full max-md:text-5xl md:text-6xl";
+        "mt-6 text-8xl font-medium text-[#212121] max-md:max-w-full max-md:text-5xl md:text-7xl";
       styles.descriptionClassName =
         "mt-8 text-3xl max-md:mt-10 max-md:max-w-full text-[#212121] max-md:text-2xl";
       styles.subheadingClassName =

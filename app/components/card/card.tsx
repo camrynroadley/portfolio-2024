@@ -46,17 +46,19 @@ const Card = (props: CardProps): JSX.Element => {
           <span className="font-medium">{descriptionTextArray?.[1] || ""}</span>
           {descriptionTextArray?.[2] || ""}
         </div>
-        {buttons?.length &&
-          buttons.map((button: Button) => (
-            <span key={`button-${button.label}`}>
-              <a target="_blank" href={button.link}>
-                <button className={buttonClassName}>
-                  <span className="relative z-10">{button.label}</span>
-                </button>
-              </a>
-            </span>
-          ))}
-          </div>
+        <div className="flex flex-row">
+          {buttons?.length &&
+            buttons.map((button: Button) => (
+              <span key={`button-${button.label}`}>
+                <a target="_blank" href={button.link}>
+                  <button className={buttonClassName}>
+                    <span className="relative z-10">{button.label}</span>
+                  </button>
+                </a>
+              </span>
+            ))}
+        </div>
+      </div>
     </motion.div>
   );
 };

@@ -23,8 +23,8 @@ const Hero = ({ onButtonClick }: HeroProps) => {
   );
 
   return (
-    <div className="h-screen flex flex-col items-center max-lg:px-10">
-      <div className="mt-[8%] w-full max-w-full max-lg:mt-10">
+    <div className="h-screen flex flex-col justify-center max-lg:px-10">
+      <div className="w-full max-w-full max-lg:-mt-10">
         <div className="flex w-[1000px] ml-auto mr-auto max-md:flex-col">
           <div className="flex flex-col">
             <motion.div

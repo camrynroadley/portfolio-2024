@@ -24,7 +24,7 @@ describe("Contact Component", () => {
     expect(gitHubPersonalLink.tagName).toBe("A");
     expect(gitHubPersonalLink).toHaveAttribute(
       "href",
-      "https://www.linkedin.com/in/camrynroadley"
+      "https://github.com/camrynroadley"
     );
     expect(gitHubPersonalLink).toHaveAttribute("target", "_blank");
 
@@ -34,7 +34,7 @@ describe("Contact Component", () => {
     expect(gitHubProfessionalLink.tagName).toBe("A");
     expect(gitHubProfessionalLink).toHaveAttribute(
       "href",
-      "https://www.linkedin.com/in/camrynroadley"
+      "https://github.com/croadley"
     );
     expect(gitHubProfessionalLink).toHaveAttribute("target", "_blank");
 
@@ -43,6 +43,6 @@ describe("Contact Component", () => {
     expect(getByText("PROFESSIONAL")).toBeInTheDocument();
 
     // Ensure that there are correct number of ⚬ separators
-    expect(document.querySelectorAll(".self-stretch.text-xl").length).toBe(3);
+    expect(document.querySelectorAll(".self-stretch.text-xl").length).toBe(2);
   });
 });
