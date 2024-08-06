@@ -10,11 +10,11 @@ const getStyles = (index: number) => {
   switch (index) {
     case 0:
       styles.backgroundClassName =
-        "items-start flex flex-col justify-center h-[97vh] bg-[#D5E058] max-w-full max-sm:px-[7%] max-lg:px-[8%] lg:px-[12%] xl:px-[15%]";
+        "items-start flex flex-col justify-center h-[96vh] bg-[#D5E058] max-w-full max-sm:px-[7%] max-lg:px-[8%] lg:px-[12%] xl:px-[15%]";
       styles.headingClassName =
-        "mt-6 text-9xl font-medium text-[#212121] max-md:max-w-full max-md:text-7xl";
+        "mt-6 text-8xl font-medium text-[#212121] max-md:max-w-full max-md:text-7xl max-lg:text-7xl";
       styles.descriptionClassName =
-        "mt-8 text-3xl max-md:mt-10 max-md:max-w-full text-[#212121] max-md:text-xl";
+        "mt-8 text-3xl max-md:mt-10 max-md:max-w-full text-[#212121] max-md:text-xl max-lg:text-2xl";
       styles.subheadingClassName =
         "max-md:max-w-full font-medium text-[#212121] text-2xl";
       styles.dateClassName = "max-md:max-w-full font-normal text-[#212121]";
@@ -25,9 +25,9 @@ const getStyles = (index: number) => {
       styles.backgroundClassName =
         "items-start flex flex-col justify-center h-[92vh] bg-[#E1C664] max-w-full max-sm:px-[7%] max-lg:px-[8%] lg:px-[12%] xl:px-[15%]";
       styles.headingClassName =
-        "mt-6 text-9xl font-medium text-[#212121] max-md:max-w-full max-md:text-7xl";
+        "mt-6 text-8xl font-medium text-[#212121] max-md:max-w-full max-md:text-7xl max-lg:text-7xl";
       styles.descriptionClassName =
-        "mt-8 text-3xl max-md:mt-10 max-md:max-w-full text-[#212121] max-md:text-2xl";
+        "mt-8 text-3xl max-md:mt-10 max-md:max-w-full text-[#212121] max-md:text-2xl max-lg:text-2xl";
       styles.subheadingClassName =
         "max-md:max-w-full font-medium text-[#212121] text-2xl";
       styles.dateClassName = "max-md:max-w-full font-normal text-[#212121]";
@@ -36,33 +36,33 @@ const getStyles = (index: number) => {
       break;
     case 2:
       styles.backgroundClassName =
-        "items-start flex flex-col justify-center h-[87vh] bg-[#FF7C7C] max-w-full max-sm:px-[7%] max-lg:px-[8%] lg:px-[12%] xl:px-[15%]";
+        "items-start flex flex-col justify-center h-[88vh] bg-[#FF7C7C] max-w-full max-sm:px-[7%] max-lg:px-[8%] lg:px-[12%] xl:px-[15%]";
       styles.headingClassName =
         "mt-6 text-8xl font-medium text-[#212121] max-md:max-w-full max-md:text-4xl md:text-7xl";
       styles.descriptionClassName =
-        "mt-8 text-3xl max-md:mt-10 max-md:max-w-full text-[#212121] max-md:text-2xl";
+        "mt-8 text-3xl max-md:mt-10 max-md:max-w-full text-[#212121] max-md:text-2xl max-lg:text-2xl";
       styles.subheadingClassName =
         "max-md:max-w-full font-medium text-[#212121] text-2xl";
       styles.dateClassName = "max-md:max-w-full font-normal text-[#212121]";
       break;
     case 3:
       styles.backgroundClassName =
-        "items-start flex flex-col justify-center h-[84vh] bg-[#C7B1F6] max-w-full max-sm:px-[7%] max-md:px-[8%] md:px-[12%] lg:px-[12%] xl:px-[15%]";
+        "items-start flex flex-col justify-center h-[84vh] bg-[#C7B1F6] max-w-full max-sm:px-[7%] max-lg:px-[8%] lg:px-[12%] xl:px-[15%]";
       styles.headingClassName =
         "mt-6 text-8xl font-medium text-[#212121] max-md:max-w-full max-md:text-5xl md:text-7xl";
       styles.descriptionClassName =
-        "mt-8 text-3xl max-md:mt-10 max-md:max-w-full text-[#212121] max-md:text-xl";
+        "mt-8 text-3xl max-md:mt-10 max-md:max-w-full text-[#212121] max-md:text-xl max-lg:text-2xl";
       styles.subheadingClassName =
         "max-md:max-w-full font-medium text-[#212121] text-2xl";
       styles.dateClassName = "max-md:max-w-full font-normal text-[#212121]";
       break;
     case 4:
       styles.backgroundClassName =
-        "items-start flex flex-col justify-center h-[80vh] bg-[#F6D5FC] max-w-full max-sm:px-[7%] max-md:px-[8%] md:px-[12%] lg:px-[12%] xl:px-[15%]";
+        "items-start flex flex-col justify-center h-[80vh] bg-[#F6D5FC] max-w-full max-sm:px-[7%] max-lg:px-[8%] lg:px-[12%] xl:px-[15%]";
       styles.headingClassName =
         "mt-6 text-8xl font-medium text-[#212121] max-md:max-w-full max-md:text-5xl md:text-7xl";
       styles.descriptionClassName =
-        "mt-8 text-3xl max-md:mt-10 max-md:max-w-full text-[#212121] max-md:text-2xl";
+        "mt-8 text-3xl max-md:mt-10 max-md:max-w-full text-[#212121] max-md:text-2xl max-lg:text-2xl";
       styles.subheadingClassName =
         "max-md:max-w-full font-medium text-[#212121] text-2xl";
       styles.dateClassName = "max-md:max-w-full font-normal text-[#212121]";
